@@ -15,7 +15,7 @@ services:
     ports:
       # Change the number before : to the port the web interface should be accessible on
       # Add 127.0.0.1: prefix for localhost-only access (recommended for security)
-      - '5000:80'
+      - '8080:8080'
       # Change the number before : to the port the SMTP server should be accessible on
       # Add 127.0.0.1: prefix for localhost-only access (recommended for security)
       - '25:25'
@@ -37,7 +37,7 @@ services:
       #- ServerOptions__BasePath=/smtp4dev
 
       #Specifies the URLs the web UI will use inside the container.
-      - ServerOptions__Urls=http://*:80
+      - ServerOptions__Urls=http://*:8080
 
       #Specifies the server hostname. Used in auto-generated TLS certificate if enabled.
       - ServerOptions__HostName=smtp4dev
